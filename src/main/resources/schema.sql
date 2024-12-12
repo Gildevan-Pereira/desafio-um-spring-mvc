@@ -1,0 +1,7 @@
+CREATE TABLE SCORE (
+    id INTEGER auto_increment NOT NULL,
+    vitorias INTEGER NOT NULL DEFAULT 0,
+    derrotas INTEGER NOT NULL DEFAULT 0,
+    empates INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (id)
+);

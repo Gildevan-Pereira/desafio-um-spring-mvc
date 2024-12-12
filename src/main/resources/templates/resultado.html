@@ -1,0 +1,101 @@
+<html>
+    <body class="resultado">
+        <h1> Hello World! Estamos na página de resultados </h1>
+        <br>
+        Você escolheu: <span class="escolha" th:text="${aEscolha}"></span>
+        <br>
+        O resultado de sua escolha foi: <span class="resultado-destaque" th:text="${saida}"></span>
+        <br>
+        <div class="resultados">
+            <div class="resultado vitoria">Vitórias: <span th:text="${score.vitorias}"></span></div>
+            <div class="resultado derrota">Derrotas: <span th:text="${score.derrotas}"></span></div>
+            <div class="resultado empate">Empates: <span th:text="${score.empates}"></span></div>
+        </div>
+
+        <br>
+        <a href="/zerar" class="zerar">Zerar Score</a>
+        <br>
+        <a href="/" class="denovo">Jogar de Novo</a>
+    </body>
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .resultado-destaque {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .escolha {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .resultados {
+          display: flex;
+          margin: 25px;
+          justify-content: center;
+        }
+
+        .resultado {
+          padding: 10px
+          margin: 5px 10px;
+          border-radius: 5px;
+          text-align: center;
+        }
+        .resultado {
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          text-align: center;
+        }
+
+        .vitoria {
+          background-color: lightgreen;
+          margin: 5px 10px;
+        }
+
+        .derrota {
+          background-color: lightcoral;
+          margin: 5px 10px;
+        }
+
+        .empate {
+          background-color: lightblue;
+          margin: 5px 10px;
+        }
+        .zerar {
+            margin-top: 20px;
+            background-color: #FF0000;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .denovo {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</html>
